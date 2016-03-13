@@ -1,34 +1,71 @@
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  function filterPath(string) {
+    return string
+      .replace(/^\//,'')
+      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+      .replace(/\/$/,'');
+  }
+  $('a[href*=#]').each(function() {
+    if ( filterPath(location.pathname) == filterPath(this.pathname)
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+         $(this).click(function() {
+           $('html, body').animate({scrollTop: targetOffset}, 1500);
+           return false;
+         });
+      }
+    }
+  });
+});
+</script>
 <head>
-<link href="style.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
 <body>
-<!--Nav begin-->
-<div id="supercontainer">
-<div id="nav">
-	<ul>
-		<li><a href="#top">Home</li>
-		<li><a href="#about">About</li>
-		<li><a href="#history">History</li>
-		<li><a href="#contact">Contact</li>
-	</ul>
-</div>
-<!--Nav end-->
 
-<!--Main content begin-->
-<div id="topcontainer" class="maincontainer">
-	<a id="top" class="smooth"></a>
-</div>
-<div id="aboutcontainer" class="maincontainer">
-	<a id="about" class="smooth"></a>
-</div>
-<div id="historycontainer" class="maincontainer">
-	<a id="history" class="smooth"></a>
-</div>
-<div id="contactcontainer" class="maincontainer">
-	<a id="contact" class="smooth"></a>
-</div>
-</div>
-<!--Main content end-->
+	<div id="supercontainer">
+		<!--Nav begin-->
+		<nav>
+			<div id="navname">
+				<span><h2>Hans Kristian</h2><span>
+			</div>
+			<div id="navbuttons">
+				<ul>
+					<li><a href="#top" class="headerlink">Home</a></li>
+					<li><a href="#about" class="headerlink">About</a></li>
+					<li><a href="#history" class="headerlink">History</a></li>
+					<li><a href="#contact" class="headerlink">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!--Nav end-->
+
+		<!--Main content begin-->
+		<div id="topcontainer" class="maincontainer">
+			<a id="top" class="smooth"></a>
+			<div id="hello">
+				<h1>Hello</h1>
+				<h2>I'm Hans Kristian</h2>
+			</div>
+		</div>
+		<div id="aboutcontainer" class="maincontainer">
+			<a id="about" class="smooth"></a>
+		</div>
+		<div id="historycontainer" class="maincontainer">
+			<a id="history" class="smooth"></a>
+		</div>
+		<div id="contactcontainer" class="maincontainer">
+			<a id="contact" class="smooth"></a>
+		</div>
+
+		<!--Main content end-->
+	</div>
 </body>
 </html>
