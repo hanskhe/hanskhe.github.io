@@ -4,9 +4,9 @@
 $(document).ready(function() {
   function filterPath(string) {
     return string
-      .replace(/^\//,'')
-      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-      .replace(/\/$/,'');
+    .replace(/^\//,'')
+    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+    .replace(/\/$/,'');
   }
   $('a[href*=#]').each(function() {
     if ( filterPath(location.pathname) == filterPath(this.pathname)
@@ -14,58 +14,91 @@ $(document).ready(function() {
     && this.hash.replace(/#/,'') ) {
       var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
       var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
-         $(this).click(function() {
-           $('html, body').animate({scrollTop: targetOffset}, 1500);
-           return false;
-         });
+      if ($target) {
+        var targetOffset = $target.offset().top;
+        $(this).click(function() {
+          $('html, body').animate({scrollTop: targetOffset}, 1500);
+          return false;
+        });
       }
     }
   });
 });
 </script>
 <head>
-	<link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-	<div id="supercontainer">
-		<!--Nav begin-->
-		<nav>
-			<div id="navname">
-				<span><h2>Hans Kristian</h2><span>
-			</div>
-			<div id="navbuttons">
-				<ul>
-					<li><a href="#top" class="headerlink">Home</a></li>
-					<li><a href="#about" class="headerlink">About</a></li>
-					<li><a href="#history" class="headerlink">History</a></li>
-					<li><a href="#contact" class="headerlink">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-		<!--Nav end-->
+  <div id="supercontainer">
+    <!--Nav begin-->
+    <nav>
+      <div id="navname">
+        <span><h2>Hans Kristian</h2><span>
+        </div>
+        <div id="navbuttons">
+          <ul>
+            <li><a href="#top" class="headerlink">Home</a></li>
+            <li><a href="#about" class="headerlink">About</a></li>
+            <li><a href="#history" class="headerlink">History</a></li>
+            <li><a href="#contact" class="headerlink">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!--Nav end-->
 
-		<!--Main content begin-->
-		<div id="topcontainer" class="maincontainer">
-			<a id="top" class="smooth"></a>
-			<div id="hello">
-				<h1>Hello</h1>
-				<h2>I'm Hans Kristian</h2>
-			</div>
-		</div>
-		<div id="aboutcontainer" class="maincontainer">
-			<a id="about" class="smooth"></a>
-		</div>
-		<div id="historycontainer" class="maincontainer">
-			<a id="history" class="smooth"></a>
-		</div>
-		<div id="contactcontainer" class="maincontainer">
-			<a id="contact" class="smooth"></a>
-		</div>
+      <!--Main content begin-->
+      <div id="topcontainer" class="maincontainer">
+        <a id="top" class="smooth"></a>
+        <div id="hello">
+          <h1>Hello</h1>
+          <h2>I'm Hans Kristian</h2>
+        </div>
+      </div>
+      <div id="aboutcontainer" class="maincontainer">
+        <a id="about" class="smooth"></a>
+        <h2 class="containerheader">About me</h2>
+        <div class="lefthalf">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum quam quis nisi cursus, vel cursus felis molestie. Suspendisse pretium justo et magna auctor pharetra. Donec at venenatis urna. Sed at felis maximus, suscipit risus at, euismod augue. Fusce in sodales enim, at semper lorem. Nulla facilisi. Quisque libero tortor, facilisis imperdiet ullamcorper in, vulputate at eros. Phasellus dictum, ipsum eget aliquet gravida, nibh nibh ultricies odio, a molestie quam diam ut augue. Sed vitae neque suscipit, varius urna eget, aliquam dolor. Morbi tincidunt arcu odio, sed scelerisque erat facilisis vitae. Vivamus lectus libero, placerat ac pretium vel, rhoncus vitae augue. Aenean egestas gravida augue, a pharetra massa luctus sit amet. Fusce blandit, leo sed lobortis vestibulum, tellus lorem volutpat arcu, vel condimentum arcu sapien tincidunt orci. Phasellus cursus facilisis scelerisque. Integer tincidunt justo sed pulvinar posuere. Sed dictum, felis vitae sagittis aliquam, urna turpis luctus dui, sed pulvinar urna mi sit amet nunc.</p>
+        </div>
+        <div class="righthalf">
+          <h3>Interests and hobbies</h3>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+          <div class="interest">
+            <img src="img/coffee.png" alt="Coffee"/>
+            <h4>Coffee</h4>
+          </div>
+        </div>
+      </div>
+      <div id="historycontainer" class="maincontainer">
+        <a id="history" class="smooth"></a>
+        <h2 class="containerheader">History</h2>
+      </div>
+      <div id="contactcontainer" class="maincontainer">
+        <a id="contact" class="smooth"></a>
+        <h2 class="containerheader">Contact me</h2>
+      </div>
 
-		<!--Main content end-->
-	</div>
-</body>
-</html>
+      <!--Main content end-->
+    </div>
+  </body>
+  </html>
