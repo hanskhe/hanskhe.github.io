@@ -181,18 +181,18 @@ nav li a{
 
 #experiencecontainer .experienceblock{
     width: 25%;
+    display: inline-block;
 }
 
 #experiencecontainer .experienceheader{
   height: 80px;
-  text-align: center;
 }
 
 #experiencecontainer h3{
-  padding-top: calc((80px - 25px) / 2);
   padding-bottom: calc((80px - 25px) / 2);
   font-size: 25px;
-  display: inline;
+  display: inline-block;
+  width: calc(100% - 100px);
 }
 
 #contactcontainer{
