@@ -49,7 +49,7 @@ nav #navname h2{
 }
 
 nav #navbuttons{
-  width: 350;
+  width: 370px;
   float: right;
 }
 
@@ -72,7 +72,7 @@ nav li a{
 
 .maincontainer{
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   margin: 0px;
   overflow:hidden;
   position: relative;
@@ -114,7 +114,7 @@ nav li a{
 #topcontainer #hello{
   text-align: center;
   display:block;
-  height: 100%;
+  height: 100vh;
   padding-top: 300px;
   color:white
 
@@ -131,7 +131,7 @@ nav li a{
   background-image: url(img/Trondheim.jpg);
   background-size: cover;
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -o-filter: blur(5px);
@@ -169,12 +169,34 @@ nav li a{
   height:100px;
 }
 
-#historycontainer{
+#experiencecontainer{
   background-color: lightgrey;
+  padding-left: 100px;
+  padding-right: 100px;
 }
+
+#experiencecontainer img{
+  width: 80px;
+}
+
+#experiencecontainer .experienceblock{
+    width: 25%;
+}
+
+#experiencecontainer .experienceheader{
+  height: 80px;
+  text-align: center;
+}
+
+#experiencecontainer h3{
+  padding-top: calc((80px - 25px) / 2);
+  padding-bottom: calc((80px - 25px) / 2);
+  font-size: 25px;
+  display: inline;
+}
+
 #contactcontainer{
   background-color: white;
-  height: 600px;
 }
 
 #contactcontainer p{
@@ -183,8 +205,8 @@ nav li a{
 }
 
 #contactcontainer .email{
-  margin-top: 100px;
-  font-size: 100px;
+  margin-top: 80px;
+  font-size: 80px;
   margin-bottom: 40px;
   text-align: center;
 }
