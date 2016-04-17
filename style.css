@@ -208,6 +208,35 @@ nav li a{
 #contactcontainer .email{
   margin-top: 80px;
   font-size: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   text-align: center;
+}
+
+#contactcontainer #PGP-header{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#contactcontainer #PGP-header span{
+  width: auto;
+  cursor: pointer;
+}
+
+#contactcontainer #PGP-header .fa{
+  display:inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#contactcontainer #PGP{
+  background-color: lightgrey;
+  height: 0px;
+  overflow: hidden;
+  transition: height 1s ease;
+}
+
+#contactcontainer #PGP.transform-display{
+  height: 135px;
+
 }
