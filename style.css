@@ -146,6 +146,10 @@ nav li a{
   font-size: 18px;
 }
 
+#aboutcontainer .lefthalf{
+  margin-top: 80px;
+}
+
 #aboutcontainer .righthalf{
   position: relative;
   text-align: center;
