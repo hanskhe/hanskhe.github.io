@@ -1,0 +1,109 @@
+#topcontainer.maincontainer{
+  height: auto;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+#topcontainer:before{
+  background-image: none;
+}
+
+#topcontainer #hello{
+    color:black;
+    font-size: 40px;
+    padding-top: 200px;
+    min-height: 100vh;
+}
+
+#topcontainer #hello h1{
+  font-size: 2em;
+}
+
+#topcontainer #hello h2{
+  font-size: 1em;
+}
+
+#topcontainer #hello p{
+  width: 50%;
+  margin: 50px auto;
+  font-size: 0.5em;
+}
+
+#download{
+  margin-top: 50px;
+}
+
+#download a{
+  display: block;
+}
+.filedownload{
+  position: relative;
+  background-color: #e5e5e5;
+  height: 100px;
+  line-height: 100px;
+  width: 30%;
+  min-width: 450px;
+  margin: 20px auto;
+}
+
+.filedownload:hover{
+  background-color: #d5d5d5;
+}
+
+.filedownload .linkspan{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.filedownload img{
+  margin: 20px 50px;
+  width: 60px;
+  float:left;
+}
+
+.filedownload:after{
+  clear:both;
+}
+
+.filetitle{
+  font-size: 0.5em;
+  float:left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#contactcontainer.maincontainer{
+  height: 400px;
+}
+
+#contactcontainer p{
+  width: 40%;
+  color: black;
+  margin: 30px auto;
+}
+
+footer{
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+  margin: 100px 0 0 0;
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+footer h3{
+  margin: 0;
+  font-size: 0.8em;
+}
+
+footer span{
+  display: inline-block;
+  vertical-align: middle;
+}

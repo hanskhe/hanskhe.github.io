@@ -5,6 +5,12 @@ html {
   box-sizing: inherit;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body{
   margin:0px;
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -49,7 +55,6 @@ nav #navname h2{
 }
 
 nav #navbuttons{
-  width: 370px;
   float: right;
 }
 
@@ -180,24 +185,46 @@ nav li a{
   padding-right: 100px;
 }
 
-#experiencecontainer img{
+.experienceblock img{
+  float:left;
   width: 80px;
 }
 
 #experiencecontainer .experienceblock{
     width: 25%;
+    height: 250px;
     display: inline-block;
+    margin-right: 20px;
 }
 
 #experiencecontainer .experienceheader{
   height: 80px;
 }
 
-#experiencecontainer h3{
-  padding-bottom: calc((80px - 25px) / 2);
+.experienceblock h3{
+  /*padding-bottom: calc((80px - 25px) / 2);*/
+  margin:0px;
   font-size: 25px;
   display: inline-block;
   width: calc(100% - 100px);
+  float:left;
+}
+
+.experienceblock p{
+  margin:0px;
+}
+
+.experienceblock .experienceposition{
+  display:block;
+}
+
+.experienceblock .experiencetime{
+  color:grey;
+  font-size: 12px;
+}
+
+.experienceblock .experiencedescription{
+  height: 250px
 }
 
 #contactcontainer{
