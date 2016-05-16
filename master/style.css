@@ -24,6 +24,8 @@ a{
 
 #topcontainer #hello h2{
   font-size: 1em;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 #topcontainer #hello p{
@@ -80,7 +82,7 @@ a{
 }
 
 #contactcontainer.maincontainer{
-  height: 400px;
+  height: auto;
 }
 
 #contactcontainer p{
