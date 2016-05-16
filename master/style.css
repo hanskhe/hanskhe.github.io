@@ -15,7 +15,7 @@ a{
     color:black;
     font-size: 40px;
     padding-top: 200px;
-    min-height: 100vh;
+    height: auto;
 }
 
 #topcontainer #hello h1{
