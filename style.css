@@ -5,12 +5,6 @@ html {
   box-sizing: inherit;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 body{
   margin:0px;
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -55,6 +49,7 @@ nav #navname h2{
 }
 
 nav #navbuttons{
+  width: 370px;
   float: right;
 }
 
@@ -85,7 +80,7 @@ nav li a{
 
 .maincontainer h2.containerheader{
   margin-top: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   font-size: 50px;
   color: grey;
   text-align: center;
@@ -147,7 +142,7 @@ nav li a{
   z-index: -1;
 }
 #aboutcontainer{
-  background-color: white;
+  background-color: lightgrey;
   font-size: 18px;
 }
 
@@ -185,46 +180,24 @@ nav li a{
   padding-right: 100px;
 }
 
-.experienceblock img{
-  float:left;
+#experiencecontainer img{
   width: 80px;
 }
 
 #experiencecontainer .experienceblock{
     width: 25%;
-    height: 250px;
     display: inline-block;
-    margin-right: 20px;
 }
 
 #experiencecontainer .experienceheader{
   height: 80px;
 }
 
-.experienceblock h3{
-  /*padding-bottom: calc((80px - 25px) / 2);*/
-  margin:0px;
+#experiencecontainer h3{
+  padding-bottom: calc((80px - 25px) / 2);
   font-size: 25px;
   display: inline-block;
   width: calc(100% - 100px);
-  float:left;
-}
-
-.experienceblock p{
-  margin:0px;
-}
-
-.experienceblock .experienceposition{
-  display:block;
-}
-
-.experienceblock .experiencetime{
-  color:grey;
-  font-size: 12px;
-}
-
-.experienceblock .experiencedescription{
-  height: 250px
 }
 
 #contactcontainer{
