@@ -81,6 +81,18 @@ a{
   vertical-align: middle;
 }
 
+.license{
+    border-width: 0;
+    position: absolute;
+    top: 39px;
+    right: 20px;
+    z-index: 2;
+}
+
+.license img{
+  margin: 0;
+}
+
 #contactcontainer.maincontainer{
   height: auto;
 }
